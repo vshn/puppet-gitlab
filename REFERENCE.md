@@ -270,7 +270,7 @@ Default value: ``undef``
 
 Data type: `Optional[Hash]`
 
-Hash of 'gitlab_rails' config parameters.
+Hash of 'gitlab_pages' config parameters.
 
 Default value: ``undef``
 
@@ -447,6 +447,14 @@ Default value: ``false``
 Data type: `Optional[Hash]`
 
 Hash of 'postgresql' config parameters.
+
+Default value: ``undef``
+
+##### `praefect`
+
+Data type: `Optional[Hash]`
+
+Hash of 'praefect' config parameters.
 
 Default value: ``undef``
 

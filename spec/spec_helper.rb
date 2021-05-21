@@ -8,6 +8,10 @@ ENV['COVERAGE'] ||= 'yes' if Dir.exist?(File.expand_path('../../lib', __FILE__))
 
 require 'voxpupuli/test/spec_helper'
 
+RSpec.configure do |c|
+  c.hiera_config = File.expand_path(File.join(__dir__, 'fixtures', 'hiera.yaml'))
+end
+
 if File.exist?(File.join(__dir__, 'default_module_facts.yml'))
   facts = YAML.safe_load(File.read(File.join(__dir__, 'default_module_facts.yml')))
   if facts
@@ -16,5 +20,3 @@ if File.exist?(File.join(__dir__, 'default_module_facts.yml'))
     end
   end
 end
-
-require 'spec_helper_methods'
